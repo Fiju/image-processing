@@ -1,4 +1,4 @@
-import { promises as fsPromise, existsSync, createReadStream } from "fs";
+import { createReadStream } from "fs";
 import { Request, Response } from "express";
 import pathNormalizer from "../helpers/path-normalizer";
 

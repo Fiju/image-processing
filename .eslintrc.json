@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "quotes": ["error", "double"],
+    "no-unused-vars": "warn",
+    "comma-dangle": "warn",
+    "no-alert": "warn",
+    "no-confusing-arrow": "error",
+    "no-new": "error",
+    "no-new-func": "error",
+    "no-new-wrappers": "error",
+    "no-param-reassign": "error",
+    "no-script-url": "error",
+    "no-self-compare": "error",
+    "no-caller": "error",
+    "array-callback-return": "error",
+    "no-empty-function": "error",
+    "default-case": "error",
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "guard-for-in": "error"
+  }
+}
