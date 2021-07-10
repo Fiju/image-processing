@@ -1,12 +1,18 @@
-import { existsSync } from "fs";
+import { existsSync, PathLike } from "fs";
 import path from "path";
+
+export type IResult = {
+  error?: string;
+  path?: PathLike | string;
+  isAvailable?: boolean;
+};
 
 export default function (
   fileName: string | undefined,
   width: string | undefined,
   height: string | undefined
 ) {
-  const result: any = {};
+  const result: IResult = {};
   if (!fileName) {
     result.error = "Invalid request. Image name was not provided";
   } else if (Number(width) < 0 || Number(height) < 0)
@@ -31,7 +37,6 @@ export default function (
       (!isThumbnail && existsSync(originalPath))
     )
       result.isAvailable = true;
-
-    return result;
   }
+  return result;
 }
