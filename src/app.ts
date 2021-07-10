@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
   return res.redirect(
     url.format({
       pathname: "/api/image",
-      query: { ...(req.query as any) },
+      query: { ...(req.query as any) }
     })
   );
 });
