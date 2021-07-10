@@ -5,7 +5,7 @@ import Jimp from "jimp";
 const processesor = async (req: Request, res: Response, next: Function) => {
   const { query } = req;
   await Jimp.read(
-    require("path").resolve(__dirname, `../assets/${query.name}.jpg`)
+    require("path").resolve(__dirname, `../../assets/${query.name}.jpg`)
   )
     .then((img) => {
       const w: number = Number(query.width);

@@ -18,10 +18,13 @@ export default function (
   } else if (Number(width) < 0 || Number(height) < 0)
     result.error = "Invalid resolution provided";
   else {
-    const originalPath = path.resolve(__dirname, `../assets/${fileName}.jpg`);
+    const originalPath = path.resolve(
+      __dirname,
+      `../../assets/${fileName}.jpg`
+    );
     const thumbnailPath = path.resolve(
       __dirname,
-      `../assets/thumbnails/${fileName}_${width}x${height}.jpg`
+      `../../assets/thumbnails/${fileName}_${width}x${height}.jpg`
     );
 
     if (!existsSync(originalPath)) {
