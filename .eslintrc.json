@@ -13,7 +13,6 @@
   "rules": {
     "quotes": ["error", "double"],
     "no-unused-vars": "warn",
-    "comma-dangle": "warn",
     "no-alert": "warn",
     "no-confusing-arrow": "error",
     "no-new": "error",
