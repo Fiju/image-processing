@@ -15,7 +15,12 @@ export default function (
   const result: IResult = {};
   if (!fileName) {
     result.error = "Invalid request. Image name was not provided";
-  } else if (Number(width) < 0 || Number(height) < 0)
+  } else if (
+    Number(width) < 0 ||
+    (width !== undefined && isNaN(Number(width))) ||
+    Number(height) < 0 ||
+    (height !== undefined && isNaN(Number(height)))
+  )
     result.error = "Invalid resolution provided";
   else {
     const originalPath = path.resolve(
