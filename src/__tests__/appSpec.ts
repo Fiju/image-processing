@@ -13,4 +13,10 @@ describe("It should test endpoint", () => {
 
     expect(result.status).toBe(400);
   });
+
+  it("Request /api/image?name=luffy should give 200", async () => {
+    const result = await request(app).get("/api/image?name=luffy").send();
+
+    expect(result.status).toBe(200);
+  });
 });

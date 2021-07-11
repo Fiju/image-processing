@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import * as url from "url";
 
 import imageProcessesor from "./routers/image-processesor";
@@ -7,11 +7,11 @@ import { port } from "./config/settings";
 
 export const app: express.Express = express();
 
-app.get("/", (req, res): void => {
+app.get("/", (req: Request, res: Response): void => {
   return res.redirect(
     url.format({
       pathname: "/api/image",
-      query: { ...req.query },
+      query: { ...req.query }
     } as url.UrlObject)
   );
 });
